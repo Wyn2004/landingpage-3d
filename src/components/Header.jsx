@@ -44,13 +44,15 @@ const Header = () => {
         <Menu />
       </button>
 
-      {/* Mobile Menu - Hidden by default */}
+      {/* Mobile Menu - Slide up from bottom */}
       <nav
-        className={`fixed top-16 bottom-0 right-0 left-0 p-5 bg-black/50 bg-opacity-70 backdrop-blur-md z-40 ${
-          isMobileMenuOpen ? "block" : "hidden"
+        className={`fixed top-16 bottom-0 right-0 left-0 p-5 bg-black/50 bg-opacity-70 backdrop-blur-md z-40 transition-all duration-500 ease-out ${
+          isMobileMenuOpen
+            ? "translate-y-0 opacity-100"
+            : "translate-y-full opacity-0"
         }`}
       >
-        <ul className="flex flex-col gap-6 items-center">
+        <ul className="flex flex-col gap-6 items-center pt-8">
           <li className="text-base tracking-wider transition-colors hover:text-gray-300 z-50">
             <a href="#">COMPANY</a>
           </li>
