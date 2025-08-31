@@ -1,6 +1,7 @@
 import React from "react";
 import { Gem, TvMinimalPlay, Unlink } from "lucide-react";
 import Spline from "@splinetool/react-spline";
+import TypewriterEffect from "./TypewriterEffect";
 
 const Hero = () => {
   return (
@@ -21,15 +22,7 @@ const Hero = () => {
         </div>
 
         {/* Main header */}
-        <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold m-0 mt-4 tracking-wider my-8"
-          data-aos="fade-up-right"
-          data-aos-anchor-placement="top-bottom"
-        >
-          EMAIL FOR
-          <br />
-          DEVELOPER
-        </h1>
+        <TypewriterEffect />
 
         {/* Decription */}
         <p
