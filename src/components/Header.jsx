@@ -1,31 +1,66 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [flipKey, setFlipKey] = useState(0);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFlipKey((prev) => prev + 1);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className="flex items-center justify-between py-4 px-4 lg:px-20">
       {/* Logo */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">Wyn</h1>
+      <h1
+        className="text-3xl md:text-4xl lg:text-5xl font-light m-0"
+        data-aos="flip-left"
+        key={flipKey}
+      >
+        Wyn
+      </h1>
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-12">
         <ul className="flex items-center gap-x-4">
-          <li className="text-base tracking-wider transition-colors hover:text-gray-300 z-50">
+          <li
+            className="text-base tracking-wider transition-colors hover:text-gray-300 z-50"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <a href="#">COMPANY</a>
           </li>
-          <li className="text-base tracking-wider transition-colors hover:text-gray-300 z-50">
+          <li
+            className="text-base tracking-wider transition-colors hover:text-gray-300 z-50"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="800"
+          >
             <a href="#">FEATURES</a>
           </li>
-          <li className="text-base tracking-wider transition-colors hover:text-gray-300 z-50">
+          <li
+            className="text-base tracking-wider transition-colors hover:text-gray-300 z-50"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1100"
+          >
             <a href="#">RESOURCES</a>
           </li>
-          <li className="text-base tracking-wider transition-colors hover:text-gray-300 z-50">
+          <li
+            className="text-base tracking-wider transition-colors hover:text-gray-300 z-50"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1400"
+          >
             <a href="#">CONTACT</a>
           </li>
         </ul>
