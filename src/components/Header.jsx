@@ -25,7 +25,7 @@ const Header = () => {
         data-aos="flip-left"
         key={flipKey}
       >
-        Wyn
+        <img src="/logo.png" alt="logo" className="w-20 h-20" />
       </h1>
 
       {/* Desktop Navigation */}
