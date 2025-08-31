@@ -67,15 +67,18 @@ const Header = () => {
       </nav>
 
       {/* Button signin */}
-      <button className="hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white z-50">
+      <button
+        className="hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white z-50"
+        onClick={toggleMobileMenu}
+        data-aos="zoom-out"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
         Sign in
       </button>
 
       {/* Mobile Button */}
-      <button
-        className="md:hidden text-3xl p-2 z-50"
-        onClick={toggleMobileMenu}
-      >
+      <button className="md:hidden text-3xl p-2 z-50">
         <Menu />
       </button>
 
