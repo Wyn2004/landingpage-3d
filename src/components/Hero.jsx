@@ -1,5 +1,6 @@
 import React from "react";
 import { Gem, TvMinimalPlay, Unlink } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 
 const Hero = () => {
   return (
@@ -47,7 +48,10 @@ const Hero = () => {
       </div>
 
       {/* Hero 3D Robot */}
-      <div>robot</div>
+      <Spline
+        className="absolute lg:top-0 top-[-20%] bottom-0 lg:left-[25%] sm:left-[-2%] h-full"
+        scene="https://prod.spline.design/S1qFeuWVP6Th4zat/scene.splinecode"
+      />
     </main>
   );
 };
